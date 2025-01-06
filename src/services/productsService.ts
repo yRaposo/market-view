@@ -1,3 +1,4 @@
+'use server'
 import { MLApi } from "@/libs/MLApi"
 import { Product } from "@/services/api.types"
 

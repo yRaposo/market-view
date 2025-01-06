@@ -1,3 +1,4 @@
+import { AccessTokenProvider } from "@/context/AccessContext";
 import "./globals.css";
 
 export default function RootLayout({
@@ -7,10 +8,12 @@ export default function RootLayout({
 }>) {
 
   return (
-    <html lang="en">
-      <body>
-        {children}
-      </body>
-    </html>
+    <AccessTokenProvider>
+      <html lang="en">
+        <body>
+          {children}
+        </body>
+      </html>
+    </AccessTokenProvider>
   );
 }

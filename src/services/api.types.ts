@@ -27,7 +27,7 @@ export interface Order {
     expirationDate: string;
     dateClosed: string;
     status: string;
-    totalAmount: number;
+    total_amount: number;
     buyer: {
         id: string;
         nickname: string;

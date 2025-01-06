@@ -1,4 +1,4 @@
-'use server'
+
 import { MLApi } from "@/libs/MLApi"; // Importa a instância da API MLApi
 
 // Função assíncrona para verificar o token de atualização
