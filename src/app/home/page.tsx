@@ -8,7 +8,9 @@ export default function Home() {
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const token = urlParams.get('access_token');
-    setAccessToken(token);
+    if (token !== ''){
+      setAccessToken(token);
+    }
     if (accessToken) {
       localStorage.setItem('access_token', accessToken);
     }
