@@ -22,7 +22,8 @@ export default function Access() {
           localStorage.setItem('refresh_token', data.refresh_token);
           localStorage.setItem('access_token', data.access_token);
           MLApi.defaults.headers.common['Authorization'] = `Bearer ${data.access_token}`;
-          window.location.href = `http://localhost:3000/home?access_token=${data.access_token}`;
+          //window.location.href = `http://localhost:3000/home?access_token=${data.access_token}`;
+          window.location.href = `/home`;
         })
         .catch(() => {
           const codeParam = searchParams.get('code');
