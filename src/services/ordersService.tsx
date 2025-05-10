@@ -1,7 +1,8 @@
 'use server'
 import { MLApi } from "@/libs/MLApi";
+import { Order } from "./api.types";
 
-export async function fetchOrders(userId: string, product_id: string, token: string) {
+export async function fetchOrders(userId: string, product_id: string, token: string): Promise<Order[]> {
     try {
         const response = await MLApi.get('/orders/search', {
             params: {

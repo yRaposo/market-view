@@ -18,7 +18,7 @@ export default function Layout({
         async function getUserData() {
             try {
                 const userData = await fetchUser();
-                setUserProfileImg(userData.thumbnail.picture_url);
+                setUserProfileImg(userData.profile_img);
                 setUserName(userData.nickname);
                 setUserId(userData.id);
             } catch (error) {
